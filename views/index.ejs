@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rock groups</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="preload">
+    <div id="ldi">
+        <div id="loader-img">
+            <img src="image/Loading.gif">
+        </div>
+    </div>
+</div> 
+<label id="open-mob-menu">
+        <div class="menu-line mhead"></div>
+        <div class="menu-line mcenter"></div>
+        <div class="menu-line mbottom"></div>
+</label>
+<div id="navigation">
+    <div id="point-mini-menu">
+        <div class="nav-item" ><a href="#header" class="menu-btn"">Home</a></div>
+        <div class="nav-item"><a href="#news" class="menu-btn">News</a></div>
+        <div class="nav-item"><a href="#about" class="menu-btn">About</a></div>
+        <div class="nav-item"><a href="#music" class="menu-btn" >Music</a></div>
+        <div class="nav-item"><a href="#video" class="menu-btn" >Video</a></div>
+        <div class="nav-item"><a href="#follow" class="menu-btn" >Follow</a></div>
+    </div>
+</div>
+<div class="scroll-menu" id="block-by-scroll-menu">
+    <div id="scroll-menu-block">
+        <div class="scroll-btn"><a href="#header">Nome</a></div>
+        <div class="scroll-btn"><a href="#news">News</a></div>
+        <div class="scroll-btn"><a href="#about">About</a></div>
+        <div class="scroll-btn"><a href="#music">Music</a></div>
+        <div class="scroll-btn"><a href="#video">Video</a></div>
+        <div class="scroll-btn"><a href="#follow">Follow</a></div>
+    </div>
+</div>
+<div id="header">
+   <div id="group-logo">
+        <h1 id="logoimage">
+            <a href="/">
+                <img src="image/logo.png">
+            </a>
+        </h1>
+    </div>
+
+    <div class="head-line">
+        <div class="head-nav-line">         
+            <div id="head-last-menu">
+                <div class="head-menu-btn index">
+                    <a href="#header">Home</a>
+                </div>
+                <div class="head-menu-btn index">
+                    <a href="#news">News</a>
+                </div>
+                <div class="head-menu-btn index">
+                    <a href="#about">About</a>
+                </div>
+                <div class="head-menu-btn index">
+                    <a href="#music">Music</a>
+                </div>
+                <div class="head-menu-btn index">
+                    <a href="#video">Video</a>
+                </div>
+                <div class="head-menu-btn index">
+                    <a href="#follow">Follow</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="head-content">
+        <div id="head-back">
+            <div id="back-photo"></div>
+        </div>
+    </div>
+    <div class="block-video">
+           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TIjvei4BgFk" frameborder="0" id="headvideo" allowfullscreen></iframe> 
+    </div>
+</div>
+<!-- news block -->
+<div id="news">
+    <div id="news-block">
+        <div id="news-title-btn">
+        <h1>GO INSIDE THE STUDIO</h1>
+        <h2>NEW "name group" ALBUM IN THE WORKS.  COME INSIDE OUR WORLD.</h2>
+        <a href="http://facebook.com" target="_blank">
+            <div class="title-h">
+                <div class="text-btn">LEARN MORE</div>
+            </div> 
+        </a>           
+        </div>
+        <div class="line-v"></div>
+        <div class="latest-news">
+            <h1>LATEST NEWS</h1>  
+        </div>      
+        <div class="news-content">       
+            <div id="news-scrool">
+                <div id="scr-content">
+                    <div id="scr-head">
+                        <div id="news-scr-title">
+                            <h1>FEATURED</h1>
+                        </div>
+                        <div id="news-block-navigation">
+                            <div id="news-to" onclick="newspos(this)"></div>
+                            <div id="news-prew" onclick="newspos(this)"></div>
+                        </div>
+                    </div>
+                    <div id="news-scr-content">
+					<% for(var i = 0; i < news.length; i++) { %>
+						<div class="news-c">                           
+                            <div class="news-img">
+                                <img src="image/news/<%= news[i].img %>">
+                            </div>
+                             <div class="news-name">
+                                <h2><%= news[i].name %></h2>
+                            </div>
+                            <div class="news-minitext">
+                                <span><%= news[i].mintext %></span>
+                            </div>
+                            <div class="news-full-link">
+                                <a href="<%= news[i].link %>" target="_blank">Full news</a>
+                            </div>
+                        </div>			 
+						<% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="gallery">
+    <div class="gal-block">
+        <div class="gal-img-block">
+            <img src="image/gallery/0.jpg">
+            <div class="display-style">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            <div id="gal-nav">
+                <div class="gal-prev" onclick="prew()"></div>
+                <div class="gal-to" onclick="to()"></div>
+            </div>
+            <div class="gal-nav-block">
+                <div class="nav-point check" onclick="next(this)"></div>
+                <div class="nav-point" onclick="next(this)"></div>
+                <div class="nav-point" onclick="next(this)"></div>
+                <div class="nav-point" onclick="next(this)"></div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- About block -->
+<div id="about">
+<div id="about-content">
+    <div class="ab-title">
+        ABOUT group name
+    </div>
+    <div class="about-text-content">
+        <div class="about-text">            
+            Over the past two decades Papa Roach have established themselves as true trendsetters in rock music: They've been nominated for two Grammys, toured the globe with everyone from Eminem to Marilyn Manson and crafted the nü metal anthem “Last Resort,” which is still in heavy rotation on rock radio seventeen years after its release. However, the group's ninth full-length Crooked Teeth sees the band returning to their humble—and hungry—roots. The album was recorded in a cramped North Hollywood studio with up-and-coming producers Nicholas “RAS” Furlong and Colin Brittain, who grew up listening to Papa Roach and inspired them to revisit some of the traits that personally endeared the band to them, most notably frontman Jacoby Shaddix's remarkable rapping technique. From the instantly infectious nature of the title track to the atmospheric sheen of the ballad “Periscope” (which features Skylar Grey) and the hip-hop rock mashup “Sunrise Trailer Park” (which features an impassioned verse from Machine Gun Kelly), Crooked Teeth displays the various sides of Papa Roach and illustrates why they've managed to remain relevant while musical trends ebb and flow. Crooked Teeth also sees Shaddix pulling no punches lyrically, as evidenced on intensely personal tracks like “Born For Greatness,” produced by Jason Evigan (Jason Derulo, Demi Lovato, Kehlani, Madonna), which sees Shaddix getting sentimental about his three children, or “American Dreams” where the lifelong pacifist begs the listener to ask, “have you ever thought war was a sickness? The album’s acclaimed track “Help” debuted as the #1 Most Added at Active Rock and quickly became the #1 rock song in the country. Crooked Teeth is out May 19 via Eleven Seven Music.
+        </div>
+        <div class="group-storage">
+            <span>Group composition</span>
+            <div class="square">
+                Jacoby Shaddix - Vocals <br>
+                Jerry Horton - Guitars <br>
+                Tobin Esperance - Bass <br>
+                Tony Palermo - Drums <br>
+            </div>
+        </div>
+        <a href="http://facebook.com" target="_blank">
+            <div class="title-h">
+                <div class="text-btn">READ MORE</div>
+            </div> 
+        </a>           
+    </div>
+</div>
+</div>
+<div id="music">
+    <div id="mms-dio">
+ 	<div class="ab-title">
+        Music
+    </div>
+    <div class="play-l-block">       
+            <div id="player-block"> 
+            <!-- Header of audio player -->
+                <div class="player-head">
+                    <div class="audio-data">
+                        <div >      
+                            <MARQUEE scrollDelay=50 id="name-track"></MARQUEE>
+                        </div>
+                    </div>
+                    <div class="audio-controls">
+                        <div id="equalizer">
+                            <canvas id="oscilloscope"></canvas>
+                        </div>
+                        <div id="control-btn">
+                            <div class="volume-con">
+                                <section>   
+                                    <span class="tooltip"></span>
+                                    <div id="slider"></div> 
+                                    <span class="volume"></span> 
+                                </section>
+                            </div>
+                            <div class="control">
+                                <button id="prew"></button>
+                                <button id="playAudio"></button>
+                                <button id="stop"></button>
+                                <button id="next"></button>
+                            </div>
+                        </div>
+                        <div class="audio-track">
+                            <div class="audio-status">
+                                <div id="progress-track-line"></div>
+                            </div>
+                        </div>  
+                    </div>                  
+                </div>
+            <!-- Music list -->
+                <div class="player-list">
+                    <div id="track-list">
+                        <div id="list"> 
+                            <ul id="products" class="list clearfix">							
+							<% for(var i = 0; i < audio.length; i++) { %>
+                                <li class="clearfix tabs">              
+                                    <a class="trackname"><%= audio[i] %></a>
+                                    <input type="radio" class="plays" name="plays">
+                                </li>                               
+							<% } %>
+                            </ul>
+                        </div>              
+                    </div>
+                </div>
+                <!-- bottom navigate -->
+                <div class="player-botom">                      
+            </div>
+        </div>  
+    </div>  
+    <div class="play-r-block">
+        <div class="info-music">
+			<div class="information">
+				Over the past two decades Papa Roach have established themselves 
+				as true trendsetters in rock music: They've been nominated for two Grammys, 
+				toured the globe with everyone from Eminem to Marilyn Manson and crafted the 
+				nü metal anthem “Last Resort,” which is still in heavy rotation on rock radio 
+				seventeen years after its release. However, the group's ninth full-length 
+			</div>
+			<div class="albumslengtch">Number of albums: 0</div>
+			<div class="musiclength">Number of songs: <%= audio.length %></div>							
+		</div>		
+		<div class="line-v"></div>
+		<div class="audio-info">
+
+			<div id="audio-names"></div>
+			<div id="audio-album"></div>
+			<div id="audio-date"></div>
+
+		</div>
+    </div>
+    </div>  
+</div>
+<div id="video">
+<div id="video-content">
+    <div class="ab-title videotitle">
+         <div class="vid-txt">Latest video</div>
+         
+         
+ 	</div>
+    <!-- <div class="about-text-content">      -->
+		<a href="http://youtube.com" target="_blank">
+		    <div class="title-h video-h">
+		        <div class="text-btn buttxt">YOUTUBE</div>
+		    </div> 
+		</a>   
+        <div class="block-video">
+	           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TIjvei4BgFk" frameborder="0" id="headvideo" allowfullscreen></iframe> 
+	    </div>
+
+
+    <!-- </div> -->
+</div>
+</div>
+<div id="follow">
+	<div id="follow-block">
+		<div class="ab-title">Follow</div>
+        <div id="insta">
+            <div class="insta-title">Instagram</div>
+            <div class="line-v"></div>
+            <div class="insta-content">
+                <% for(var i = 0; i < image.length; i++) { %>  
+                	<% if( i <= 9){ %>  
+		                <a href="<%= image[i] %>" target="_blank">            
+		                	<img src=" <%= image[i] %> " width="140">    
+		            	</a>  
+	            	<% } %>       
+                <% } %> 
+            </div>
+        </div>
+        <div id="twiter">
+            <div class="twit-line">Twitter</div>
+            <div class="line-v"></div>
+            <div class="twit-content">
+            	<% for(var i = 0; i < JSON.parse(tweets).length; i++) { %>     
+            		<% if( i <= 6){ %>                      
+                        <div class="tweet-block">
+                        	<div class="tweet-content">
+                        		<div class="tweet-text"><%= JSON.parse(tweets)[i].text.split('http')[0] %></div>
+                        	</div>
+                        	<div class="tweet-link">
+                        	<a href="https://twitter.com/Pro100y_4elovek/status/<%= JSON.parse(tweets)[i].id_str %>" target="_blank">To tweet</a>
+                        		                       			
+                    		</div>
+                        	<div class="tweet-data"><%= JSON.parse(tweets)[i].created_at.split('+')[0] %></div>
+                        </div>  
+                    <% } %>                                            
+				<% } %>
+            </div>
+        </div>
+	</div>
+</div>
+<div id="links">
+   <div class="content-links">
+		<a href="#"><div class="iconSS fa-vk"></div></a>
+		<a href="#"><div class="iconSS fa-insta"></div></a>
+		<a href="#"><div class="iconSS fa-utube"></div></a>
+		<a href="#"><div class="iconSS fa-facebook"></div></a>
+		<a href="#"><div class="iconSS fa-twit"></div></a>
+   </div>
+</div>
+<div id="footer">
+	<div id="copiright">
+		<a href="#">copyright © 2017 KilloBIT Studio</a>
+	</div>
+</div>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

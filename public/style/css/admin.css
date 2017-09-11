@@ -1,0 +1,413 @@
+ ::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-color: #777;
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-color: #7F7F7F;
+    background-color: #777;
+}
+
+::-webkit-scrollbar-track{
+    border-width:0;
+    background-color: #e2e2e2;
+}
+
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #e2e2e2;
+}
+
+body{
+	background: #09090b;
+    margin: 0;
+    padding: 0;
+}
+
+
+.ccc{
+    width: 50%;
+    min-width: 350px;
+    float: left;
+    display: inline-block;
+}
+
+.adm-content{
+    width: 96%;
+    padding: 15px 0;
+    background: #171720;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+}
+
+.news-data{
+     width: 90%;
+    font-size: 18px;
+    padding-left: 7px;
+    border-radius: 7px;
+    margin: 12px 0 0 17px;
+
+}
+
+
+input[type="file"]{
+    margin: 25px;
+}
+
+#addmusic{
+   float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: chartreuse;
+    margin-left: 2%;
+    width: 96%;
+    padding: 15px 0;
+    background: #171720;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    float: left;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3a3a3a;
+    padding-top: 0;
+}
+
+#addmusic #audioAlbuums{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 16px;
+}
+
+#addmusic input[type="submit"]{
+    float: right;
+    margin-right: 24px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 91%;
+}
+
+
+#addnews{
+    float: left;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3a3a3a;
+    padding-top: 0;
+}
+
+.title-adm{
+    float: left;
+    width: 100%;
+    height: 31px;
+    background: black;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 9px 9px 0 0;
+    font-weight: 900;
+    padding-top: 11px;
+    font-family: sans-serif;
+}
+
+input[type="submit"]{
+    float: right;
+    margin-right: 24px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 19px;
+}
+
+.album{
+    float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: chartreuse;
+    margin-left: 2%;
+    width: 96%;
+    padding: 15px 0;
+    background: #171720;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    float: left;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3a3a3a;
+    padding-top: 0;
+}
+
+.header{  
+    width: 100%;
+    height: 30px;
+    background: #171720;
+    display: inline-block;
+    border-width: 0 0 1px 0
+    border-style: solid;
+    border-color: #3b3b3b;
+    border-radius: 5px;
+}
+.header input[type="button"]{
+    width: 100%;
+    height: 29px;
+    border-color: black;
+    border-style: solid;
+    background: #444350;
+    color: white;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.header input[type="button"]:hover{
+    background: #5b5a66;
+}
+
+.header input[type="button"]:active{
+    background: #6d5252;
+}
+
+.adm-content input[type="text"]{
+     width: 90%;
+    height: 24px;
+    font-size: 18px;
+    padding-left: 7px;
+    border-radius: 7px;
+    margin: 12px 0 0 17px;
+
+}
+
+.menu{
+    float: right;
+    width: 80px;
+}
+
+.exit{
+    float: right;
+    width: 80px;
+}
+
+#delnews{
+    float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: chartreuse;
+    margin-left: 2%;
+    width: 96%;
+    padding: 15px 0;
+    background: #171720;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    float: left;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3a3a3a;
+    padding-top: 0;
+    max-height: 238px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.news-c-block{
+    width: 100%;
+    height: 75px;
+    /* height: 50px; */
+    background: #333233;
+    position: relative;
+    border-bottom: black 1px solid;
+}
+
+.newsname{
+    float: left;
+    width: 100%;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 5px 0px 5px 9px
+}
+
+.newstext{
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+
+.btndelete{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #151515;
+    right: -2px;
+    top: -2px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    border-style: solid;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    border-color: black;
+    border-width: 1px;
+}
+
+.btndelete:hover{
+    background: red;
+}
+
+.line-v{
+    height: 2px;
+    background: #4e4a59;
+    margin: 20px 20px 9px 20px;
+}
+
+.album-name, .audio-name{
+    color: white;
+    padding-left: 10px;
+}
+
+.album-block, .audio-block{
+    position: relative;
+    background: #151515;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    border-style: solid;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    border-color: black;
+    margin-top: 7px;
+}
+
+.btn-album-delete, .btn-audio-delete{
+     width: 25px;
+    height: 25px;
+    position: absolute;
+    background: #151515;
+    right: -2px;
+    top: -2px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    border-style: solid;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    border-color: black;
+    border-width: 1px;
+}
+
+.btn-album-delete:hover{ 
+    background: red;
+}
+
+
+.album input[type="text"] {
+    width: 75%;
+    height: 24px;
+    font-size: 18px;
+    padding-left: 7px;
+    border-radius: 7px;
+    margin: 12px 0 0 17px;
+}
+
+.album input[type="button"]{
+    float: right;
+    margin-right: 24px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+
+.delaudio{
+    float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: chartreuse;
+    margin-left: 2%;
+    width: 96%;
+    padding: 15px 0;
+    background: #171720;
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    float: left;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3a3a3a;
+    padding-top: 0;
+    max-height: 270px;
+    overflow-y: auto;
+}
+
+.delaudio input[type="button"]{
+    float: right;
+    margin-right: 24px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 810px) {
+    .ccc{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .delaudio input[type="text"] {
+        width: 70%;
+    }
+
+    .album input[type="text"] {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .ccc {
+        width: 86%;
+    }
+
+      .delaudio input[type="text"] {
+        width: 60%;
+    }
+
+    .album input[type="text"] {
+        width: 60%;
+    }
+
+    .header{
+        width: 88%;
+    }
+}
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Admin zona</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/css/admin.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header class="header">
+  <div class="exit">
+    <input type="button" value="Exit" id="exitaccaunt">
+  </div>
+  <div class="menu">
+    <input type="button" value="Menu">
+  </div>
+</header>
+
+
+<div class="ccc c-left">
+  <div id="addnews" class="adm-content">
+  <div class="title-adm">Добавить новость</div>
+  <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:3000/uploadnews' 
+      method='post' 
+      encType="multipart/form-data">
+
+      <input type="text" name="newsname" class="news-data" id="nname" placeholder="Назва" maxlength="24">
+      <textarea name="news" rows="10" cols="45" class="news-data" id="ntext" placeholder="Текст" maxlength="150"></textarea>
+      <input type="text" name="fullink" class="news-data" id="nlink" placeholder="Лінк">
+      <input type="file" name="sampleFile" />
+      <input type='submit' value='Додати' />
+    </form>   
+</div>
+
+
+<div class="adm-content" id="delnews">
+<% for(var i = 0; i < news.length; i++) { %>
+  <div class="news-c-block">
+    <div class="newsname"><%= news[i].name %></div>
+    <div class="newstext"><%= news[i].mintext %></div>
+    <div class="btndelete" id="news-delete">X</div>
+  </div>
+<% } %>
+</div>
+</div>
+
+
+
+<div class="ccc c-right">
+  
+
+
+<div id="addmusic" class="adm-content">
+<div class="title-adm">Добавить аудио </div>
+<form ref='uploadForm' 
+      id='uploadFormA' 
+      action='http://localhost:3000/uploadaudio' 
+      method='post' 
+      encType="multipart/form-data">   
+        <select id="audioAlbuums" name="albums">
+        <% for(var i = 0; i < album.length; i++) { %>
+          <option value="<%= album[i].name %>"> <%= album[i].name %></option>
+        <% } %>
+        </select>
+        <input type="file" name="sampleFile" maxlength="30" id="musicname" />
+        <input type='submit' value='Додати' id="sendAudio" />
+    </form>   
+</div>
+<!--  -->
+
+
+
+<div class="album adm-content">
+<div class="title-adm"> Добавить/Удалить альбомы</div>
+  <input type="text" name="albname" id="albumname">
+  <input type="button" name="send" id="addalbum" value="Add album">
+  <div class="line-v"></div>
+  <div class="album-list">
+  <% for(var i = 0; i < album.length; i++) { %>
+      <div class="album-block">
+        <div class="album-name"><%= album[i].name %></div>
+        <div class="btn-album-delete">X</div>
+      </div>
+  <% } %>  
+   </div>
+</div>
+
+<div class="delaudio adm-content">
+<div class="title-adm"> Удалить аудио</div>
+<div class="line-v"></div>
+  <div class="audio-list">
+  <% for(var i = 0; i < audio.length; i++) { %>
+      <div class="audio-block">
+        <div class="audio-name"><%= audio[i] %></div>
+        <div class="btn-audio-delete">X</div>
+      </div>
+  <% } %>  
+   </div>
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+ 	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="js/admin.js"></script>
+</html>
+
